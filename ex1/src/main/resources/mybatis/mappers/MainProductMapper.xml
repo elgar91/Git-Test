@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+	
+<mapper namespace="com.bit.team3.model.dao.MainProductMapper">
+
+	<select id="getNewProduct" resultType="com.bit.team3.model.dto.ProductBoardBean">
+	<![CDATA[ 
+		select PRODUCTBOARDNO, NICKNAME, TITLE, DATETIME, PRODUCTCONTENT, PRODUCTNAME, PRODUCTPRICE, PICURL1 FROM (select PRODUCTBOARDNO, NICKNAME, TITLE, DATETIME,
+		PRODUCTCONTENT, PRODUCTNAME, PRODUCTPRICE, PICURL1 FROM PRODUCTBOARD order by PRODUCTBOARDNO desc) where rownum <= 4
+		]]>
+	</select>
+	
+</mapper>	

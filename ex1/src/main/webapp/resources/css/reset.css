@@ -1,0 +1,116 @@
+﻿@charset "utf-8";
+
+
+@font-face{
+   font-family:'Geomanist-Regular';
+   font-style:normal;
+   font-weight:500;
+   src:url(../font/Geomanist-Regular.otf) format('opentype');
+}
+@font-face{
+   font-family:'Komoda';
+   font-style:normal;
+   font-weight:500;
+   src:url(../font/Komoda.otf) format('opentype');
+}
+@font-face {
+    font-family: 'Proxima-Nova';
+    src: url('Mark Simonson - Proxima Nova Alt Regular-webfont.woff') format('woff'),
+         url('Mark Simonson - Proxima Nova Alt Regular-webfont.ttf') format('truetype'),
+    font-weight: 500;
+    font-style: normal;
+
+}
+
+
+
+/* DEFAULT */
+html, body{padding:0;margin:0;height:100%;}
+body, th, td, select, textarea, input{font-family:'Proxima-Nova', sans-serif;font-size:15px;color:#333}
+html, body, div, /* span ,*/  applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td, input{
+	margin:0;
+	padding:0;
+	vertical-align:top;
+	font-weight:300;
+	font-size:15px;
+	font-family:'Proxima-Nova', sans-serif;
+	letter-spacing:0;
+	word-break: keep-all;
+}
+
+/* HTML5 */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section{display:block;}
+
+/* BOLD */
+strong{font-weight:400;}
+
+/* i */
+i{font-style:normal;}
+
+/* BUTTON */
+button{padding:0;border:none;cursor:pointer;font-family:'Proxima-Nova', sans-serif;background-color:transparent;font-size:15px;font-weight:300;cursor:pointer;}
+
+/* LIST */
+ol, ul{list-style:none;}
+
+/* TABLE */
+table{border-collapse:collapse;border-spacing:0;table-layout:fixed;}
+
+/* IMG & FIELDSET & IFRAME */
+img,fieldset,iframe{border:0;}
+img{vertical-align:top;}
+
+/* ANCHOR */
+a{text-decoration:none;color:#333;-webkit-transition:all 0.1s ease;-moz-transition:all 0.1s ease;-ms-transition:all 0.1s ease;-o-transition:all 0.1s ease;transition:all 0.1s ease;letter-spacing:-1px;cursor:pointer;}
+
+/* HIDE */
+caption{width:0;height:0;border:0;line-height:0;overflow:hidden;visibility:hidden;}
+legend{width:0;height:0;border:0;line-height:0;overflow:hidden;visibility:hidden;}
+
+/* INPUT */
+input{height:33px;margin-right:10px;padding:0 10px;box-sizing:border-box;border:1px solid #ddd;}
+input:focus{border-color:#ddd;}
+
+input:-ms-input-placeholder{color:#999;}
+input:-ms-input-placeholder{color:#999;}
+input::-webkit-input-placeholder{color:#999;}
+input::-moz-placeholder{color:#999;}
+input::-moz-placeholder{color:#999;}
+
+/* TEXTAREA */
+textarea{width:100%;outline:none;resize:none;overflow-y:auto;padding:10px;box-sizing:border-box;border:1px solid #ddd;}
+textarea:focus{box-shadow:none;border-color:#ddd;}
+
+
+select{height:33px;line-height:33px;padding:0 5px;background:#fff;}
+
+/* Mobile */
+@media(max-width:768px){
+body, th, td, select, textarea, input{font-size:12px;}
+html, body, div, /* span ,*/  applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td, input{font-size:12px;}
+
+
+}
+
+/* Tablet */
+@media (min-width:768px) and (max-width:1079px){}
+
+/* PC */
+@media (min-width:1080px){}

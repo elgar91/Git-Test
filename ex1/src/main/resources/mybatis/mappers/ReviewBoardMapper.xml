@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+	
+<mapper namespace="com.bit.team3.model.dao.ReviewBoardMapper">
+	<!-- List<ReviewBoardBean>	getAllList();  -->
+	<select id="getAllReviewList" resultType="com.bit.team3.model.dto.ReviewBoardBean">
+		select boardno, nickname, title, datetime, reviewcontent, reviewcount, likes, dislikes, comments, reviewgroup, reviewstep, reviewindent
+		from reviewboard
+		order by boardno desc
+	</select>
+	
+	<!-- void setWrite(ReviewBoardBean reviewBoardBean); -->
+	<insert id="setWrite" parameterType="com.bit.team3.model.dto.ReviewBoardBean">
+		insert into reviewboard (boardno, nickname, title, reviewcontent)
+		values (review_num_seq.nextval, #{nickname}, #{title}, #{reviewContent})
+	</insert>
+	
+	<select id="detailView" resultType="com.bit.team3.model.dto.ReviewBoardBean">
+		select * from reviewboard where boardno=#{boardno}
+	</select>
+	
+	<!-- 댓글 삽입하는 거 -->
+	<insert id="commentWrite" parameterType="com.bit.team3.model.dto.ReviewCommentBean">
+		insert into reviewboardcommentlist (commentno, boardno, nickname, reviewcommentcontent)
+		values (review_comment_num_seq.nextval, #{boardNo}, #{nickname}, #{reviewCommentContent})
+	</insert>
+	
+	<select id="getAllCommentList" resultType="com.bit.team3.model.dto.ReviewCommentBean">
+		select * from reviewboardcommentlist where boardno=#{boardno}
+		order by commentno asc
+	</select>
+	
+	<update id="modifyView" parameterType="com.bit.team3.model.dto.ReviewBoardBean">
+		update reviewboard set title=#{title}, reviewcontent=#{reviewContent} where boardno=#{boardNo}
+	</update>
+	
+	<delete id="deleteView" parameterType="com.bit.team3.model.dto.ReviewBoardBean">
+		delete from reviewBoard where boardno=#{boardNo} 
+	</delete>
+	
+	<!-- 댓글 삭제 -->
+	<delete id="deleteComment" parameterType="com.bit.team3.model.dto.ReviewCommentBean">
+		delete from reviewboardcommentlist where boardno=#{boardNo}
+	</delete>
+	
+</mapper>

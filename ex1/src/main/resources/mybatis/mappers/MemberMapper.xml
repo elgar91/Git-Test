@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+	
+<mapper namespace="com.bit.team3.model.dao.MemberMapper">
+	
+	<select id="getMemberInfo" parameterType="MemberBean" resultType="MemberBean">
+		select * from member where email=#{email} and password=#{password}
+	</select>
+
+	<insert id="setSignUp" parameterType="MemberBean">
+		insert into member (nickname, password, email, tel) values (#{nickname}, #{password},#{email},#{tel})
+	</insert>
+	
+	<select id="emailCheck" resultType="MemberBean">
+		select email from member where email = #{email}
+	</select>
+	
+	
+</mapper>

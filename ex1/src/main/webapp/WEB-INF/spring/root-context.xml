@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.1.xsd">
+	
+	<!-- Root Context: defines shared resources visible to all other web components -->
+	<context:annotation-config/>
+	<context:property-placeholder location="classpath:/mybatis/config/datasource.properties"/>
+	
+	<bean class="org.springframework.jdbc.datasource.DriverManagerDataSource"
+		  id="dataSource">
+	  <property name="driverClassName" value="${driver}"/>
+	  <property name="url" value="${url}"/>
+	  <property name="username" value="taeyoung"/>
+	  <property name="password" value="0706"/>
+	</bean>	
+	
+	<bean class="org.mybatis.spring.SqlSessionFactoryBean"
+	      id="sqlSessionFactoryBean">
+	  <property name="dataSource" ref="dataSource"/>	
+	  <property name="mapperLocations" value="classpath:mybatis/mappers/*Mapper.xml"/>
+	  <property name="typeAliasesPackage" value="com.bit.team3.model.dto"/>
+	</bean>
+	
+	<bean class="org.mybatis.spring.SqlSessionTemplate"
+	      id="sqlSession">
+	      <constructor-arg  index="0" ref="sqlSessionFactoryBean"/>
+	</bean>
+	
+	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+		 <property name="basePackage" value="com.bit.team3.model.dao"/>
+	</bean>
+	
+	<bean class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		<property name="dataSource" ref="dataSource"/>
+	</bean>
+	
+		
+</beans>

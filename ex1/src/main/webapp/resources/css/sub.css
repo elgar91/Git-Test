@@ -1,0 +1,121 @@
+/* main  */
+.slider_wrap{width:100%;}
+
+.mainProduct{width:1140px;margin:0 auto;}
+.mainProduct h2{font-size: 30px;color:#777;margin-bottom: 10px;letter-spacing: 2px;}
+.mainProduct ul::after{content:'';display:block;clear:both;}
+.mainProduct ul li{float:left;width:24%; margin-right:1.33%;margin-bottom:50px;}
+.mainProduct ul li:nth-child(4n){margin-right:0;}
+.mainProduct ul li a img{width:100%;margin-bottom:10px;}
+.mainProduct ul li a p{font-size:13px;}
+
+/* product_list */
+.product_list{float:right;width:calc(100% - 200px);}
+.product_list h2{font-size: 30px;color:#777;margin-bottom: 10px;letter-spacing: 2px;}
+.product_list ul::after{content:'';display:block;clear:both;}
+.product_list ul li{float:left;width:24%; margin-right:1.33%;margin-bottom:50px;}
+.product_list ul li:nth-child(4n){margin-right:0;}
+.product_list ul li a img{width:100%;margin-bottom:10px;}
+.product_list ul li a p{font-size:13px;}
+
+
+/* product_view */
+.product_view{width:1140px;margin:0 auto;}
+.product_view .p_info::after{content:'';display:block;clear:both;}
+.product_view .p_info .img{float:left;width:700px;}
+.product_view .p_info .img ul::after{content:'';display:block;clear:both;}
+.product_view .p_info .img ul li:first-child{float:left;width:500px;}
+.product_view .p_info .img ul li{float:left;width:200px;padding:10px;box-sizing:border-box;}
+.product_view .p_info .img img{width:100%;}
+.product_view .p_info .txt{float:right;width:calc(100% - 700px);padding:15px;box-sizing:border-box;}
+.product_view .p_info .txt p{margin-bottom:10px;}
+.product_view .p_info .txt .tit{font-size:25px;}
+.product_view .p_info .txt .price{font-size:18px;}
+.product_view .p_info .txt .price span{margin-right:10px;}
+.product_view .p_info .txt .num{font-size:18px;}
+.product_view .p_info .txt .num span{margin-right:10px;}
+.product_view .p_info .txt .msg{color:red;}
+.product_view .p_info .btn_wrap{float:right;width:calc(100% - 700px);padding:15px;box-sizing:border-box;}
+.product_view .p_info .btn_wrap::after{content:'';display:block;clear:both;}
+.product_view .p_info .btn_wrap .btnBb{margin-bottom:10px;}
+.product_view .p_info .btn_wrap .fl{float:left;width:49%;}
+.product_view .p_info .btn_wrap .fr{float:right;width:49%;}
+.product_view .dotted{background:url(../img/dotted01.png);margin: 30px auto 60px;width:100%;height:1px;}
+.product_view .dotted p{padding: 20px 0;font-size:14px;font-weight:bold;letter-spacing:4px;box-sizing: border-box;}
+
+/* product_write */
+.product_write{width:1140px;margin:0 auto;}
+.product_write h2{font-size:40px;margin-bottom:30px;}
+.product_write table{width:100%;border-top:1px solid #333;}
+.product_write table tr{border-bottom:1px solid #f1f1f1;}
+.product_write table tr th{padding:18px 10px;box-sizing:border-box;}
+.product_write table tr td{padding:18px 10px;box-sizing:border-box;}
+
+/* product_order */
+.product_order{width:1140px;margin:0 auto;}
+.product_order h2{font-size:40px;margin-bottom:30px;}
+.product_order table{width:100%;border-top:1px solid #333;}
+.product_order table tr{border-bottom:1px solid #f1f1f1;}
+.product_order table tr th{padding:18px 10px;box-sizing:border-box;}
+.product_order table tr td{padding:18px 10px;box-sizing:border-box;}
+
+.product_order .order_info{margin-bottom:150px;}
+.product_order .order_info .img img{width:100%;}
+.product_order .order_info table tr th{text-align:center;}
+.product_order .order_info table tr td{line-height:130px;}
+.product_order .order_info table tr .count{text-align:center;}
+.product_order .order_info table tr .price{text-align:center;}
+
+.product_order .order_wrap .tit{text-align:left;font-size:18px;font-weight:600;}
+.product_order .order_wrap .tit::after{content:'';display:block;clear:both;}
+.product_order .order_wrap .input_wrap span{line-height:33px;margin-right:10px;}
+.product_order .order_wrap .address_chk{line-height:33px;float:right;}
+.product_order .order_wrap .address p{margin-bottom:10px;}
+.product_order .order_wrap .address p:last-child{margin-bottom:0;}
+
+/* review_list */
+.review_list{width:1140px;margin:0 auto;}
+.review_list h2{font-size:40px;margin-bottom:30px;}
+.review_list table{width:100%;border-top:1px solid #333;}
+.review_list table tr{border-bottom:1px solid #f1f1f1;}
+.review_list table tr th{padding:18px 10px;box-sizing:border-box;}
+.review_list table tr td{padding:18px 10px;box-sizing:border-box;line-height:80px;text-align:center;}
+.review_list table tr .tit{text-align:left;}
+.review_list table tr .tit img{width:100px;margin-right:5px;}
+.review_list table tr .tit p{color:#bbb;}
+
+/* signup */
+.signup{width:1140px;margin:0 auto;}
+.signup h2{font-size:40px;margin-bottom:30px;}
+.signup table{width:100%;border-top:1px solid #333;}
+.signup table tr{border-bottom:1px solid #f1f1f1;}
+.signup table tr th{padding:18px 10px;box-sizing:border-box;}
+.signup table tr td{padding:18px 10px;box-sizing:border-box;}
+.signup .input_wrap span{line-height:33px;margin-right:10px;}
+
+/* login */
+.login{width:500px;margin:0 auto;}
+.login h2{font-size:40px;margin-bottom:30px;}
+.login table{width:100%;border-top:1px solid #333;}
+.login table tr{border-bottom:1px solid #f1f1f1;}
+.login table tr th{padding:18px 10px;box-sizing:border-box;}
+.login table tr td{padding:18px 10px;box-sizing:border-box;}
+
+/* reply_list */
+.reply_wrap{}
+.reply_form{padding:20px 0;box-sizing:border-box;border-bottom:1px solid #ddd;}
+.reply_form .name{margin-bottom:10px;}
+.reply_form form .text::after{content:'';display:block;clear:both;}
+.reply_form form .text div{width:89%;float:left;}
+.reply_form form .text div textarea{height:80px;}
+.reply_form form .text a{display:block;width:10%;float:right;background:#f1f1f1;text-align:center;padding:30px 20px;box-sizing:border-box;}
+.reply_form form .text input[type="submit"]{display:block;width:10%;float:right;line-height:0px;background:#f1f1f1;text-align:center;padding:39px 20px;box-sizing:border-box;}
+
+.reply_list{padding:20px 0;box-sizing:border-box;border-bottom:1px solid #ddd;}
+.reply_list .name{margin-bottom:10px;}
+.reply_list .name::after{content:'';display:block;clear:both;}
+.reply_list .name span{font-size:12px;color:#999;}
+.reply_list .name .left{float:left;}
+.reply_list .name .right{float:right;}
+.reply_list .name .right .btn_reply_white{display:inline-block;padding:2px 15px;border:1px solid #ddd;background:#f1f1f1;box-sizing:border-box;}
+
